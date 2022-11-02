@@ -1,0 +1,377 @@
+@font-face{
+    font-family: Blambot;
+    src: url(font/fofbb_ital.otf);
+  }
+  @font-face{
+    font-family: ITCJiggeryPokeryW01;
+    src: url(font/poker/0187cd089d5e7649d052a3060071f3a5.ttf);
+  }
+  
+  *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+  }
+  .bground{
+    background-image:url(pic/Bg.gif);
+    width: 100%;
+    height: 100vh;
+    position:fixed;
+    background-size: 75%;
+    background-position: center;
+  }
+  
+  /* bagian header */
+  header{
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: rgba(139, 2, 2, 0.788);
+    border-radius:50px;
+  }
+  #toggle{
+    position: relative;
+    left:55%; 
+    bottom: 5px;
+    background-color: rgb(202, 177, 177);
+    display: block;
+    width: 60px;
+    height:30px ;
+    border-radius: 20px;
+    border: solid rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: inset 0 8px 60px rgb(218, 210, 210),
+                inset 0 8px 8px  rgb(210, 196, 196),
+                inset 0 -4px 4px rgb(206, 187, 187);
+    transition: all .5s;
+  }
+  #toggle.aktif{
+    position: relative;
+    left:55%; 
+    bottom: 5px;
+    background-color: rgb(140, 109, 109);
+    display: block;
+    width: 60px;
+    height:30px ;
+    border-radius: 20px;
+    border: solid rgb(35, 30, 30);
+    cursor: pointer;
+    box-shadow: inset 0 8px 60px rgba(59, 53, 53, 1),
+                inset 0 8px 8px  rgb(91, 77, 77),
+                inset 0 -4px 4px rgb(108, 89, 89);
+  }
+  #toggle .tbl{
+    position: relative;
+    background-color: rgb(139, 0, 0);
+    border-radius: 50%;
+    width: 50%;
+    height: 100%;
+    opacity:1;
+    box-shadow: inset 0 8px 60px rgb(63, 56, 56),
+    inset 0 8px 8px  rgb(98, 88, 88),
+    inset 0 -4px 4px rgb(165, 156, 156);
+    transition:all .5s ;
+  }
+  #toggle.aktif .tbl{
+    border: solid rgb(66, 61, 61);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 50%;
+    left: 50%;
+    height: 100%;
+    box-shadow: inset 0 8px 60px rgb(232, 217, 217),
+                inset 0 8px 8px  rgb(255, 255, 255),
+                inset 0 -4px 4px rgb(52, 46, 46);
+  
+  }
+  
+  .name{
+    position: relative;
+    font-family: Blambot;
+    display: flex;
+    font-size: 60px;
+    text-shadow:
+    -0px -0px 0 rgb(244, 236, 236),
+    0px -0px 0 rgb(236, 231, 231),
+    -0px 0px 0 rgb(252, 249, 249),
+    1px 1px 0 rgb(251, 249, 249);
+  }
+  
+  nav{
+    margin-left: 60%;
+  }
+  nav ul{
+    display: flex;
+    position: absolute;
+    list-style: none;
+    align-items: center;
+    text-decoration: none;
+    opacity: 1;
+    flex-direction: column;
+    top: 0;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 1);
+    right: 6px;
+    border-radius: 5px;
+    transform: translateX(105%);
+    transition: all 1s;
+    box-shadow: inset 0 8px 60px rgba(136, 29, 29, 0.4),
+                inset 0 8px 8px  rgba(150, 36, 36, 0.2),
+                inset 0 -4px 4px rgba(216, 11, 11, 0.3);
+  }
+  nav ul li{
+    width: 120%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+  nav ul li a{
+    font-family: ITCJiggeryPokeryW01;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    z-index: 1;
+  }
+  nav ul li a:hover{
+    font-size: 30px;
+    position: relative;
+    color: whitesmokes;
+    color: rgb(163, 20, 20);
+    padding: 20px 50px;
+    border-radius: 20px;
+  }
+  nav ul.slide{
+    transform: translateX(0);
+  }
+  .menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 9vh;
+    bottom:20px;
+    left: 40px;
+  }
+  .menu span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    cursor: pointer;
+  
+  }
+  
+  input{
+    position: relative;
+    top: 30px;
+    width: 40px;
+    height: 30px;
+    right: 5px;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .menu span:nth-child(2){
+    transform-origin:  0 0;
+    transition: all .5s;
+    background-color: rgb(255, 0, 0);
+  }
+  .menu input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px,-1px);
+    background-color: rgb(255, 5, 5);
+  }
+  .menu span:nth-child(4){
+    background-color: rgb(255, 0, 0);
+    transition: all .5s;
+    transform-origin: 0 170%;
+  }
+  .menu input:checked ~ span:nth-child(4){
+    background-color: rgb(222, 0, 0);
+    transform: rotate(-45deg) translate(-1px,0px);
+  }
+  .menu span:nth-child(3){
+    background-color: rgb(145, 39, 39);
+    transition: all .5s;
+    transform-origin: 0 170%;
+  }
+  .menu input:checked ~ span:nth-child(3){
+    width: 0;
+  }
+  
+  /* bagian konten */
+  .container{
+    position: relative;
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(240, 212, 212,.1); */
+    width: 70%;
+    height: 100vh;
+  }
+  .banner{
+    position: absolute;
+    width: 100%;
+    margin-left: 10%;
+    margin-bottom: 20%;
+    z-index:1;
+  }
+  .banner img{
+    border-radius: 20px;
+    width: 100%;
+    height: 60vh;
+    
+  }
+  .isi{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 50px;
+    margin-top: 50%;
+  }
+  .teks1{
+    position: relative;
+    top: 40%;
+    left: 30px;
+    font-family: Blambot;
+    font-size: 60px;
+    color: rgb(193, 0, 0);
+  }
+  .teks2{
+    position: relative;
+    padding: 20px 0;
+    top: 40%;
+    left: 30px;
+    font-family:cursive;
+    font-size: 25px;
+    color: rgb(190, 190, 190);
+  }
+  .gambar{
+    position: absolute;
+    margin-top: 40%;
+    opacity: 1;
+    transition: all .5s;
+    /* background-color: white; */
+  }
+  .gambar:hover{
+    margin-top: 40%;
+    opacity: 1;
+    transition: all .5s;
+  }
+  /* .gambar:hover{
+    margin-top: 40%;
+    opacity: 1;
+  } */
+  .penutup{
+    position: relative;
+    margin-left: 10px;
+    font-size: 25px;
+    top: 105px;
+    z-index: 1;
+    text-shadow:
+    -0px -0px 0 rgb(244, 236, 236),
+    0px -0px 0 rgb(236, 231, 231),
+    -0px 0px 0 rgb(252, 249, 249),
+    1px 1px 0 rgb(251, 249, 249);
+  }
+  
+  .gbr2{
+    position: fixed;
+    background-color: rgba(255, 0, 0, 0.1);
+    width: 70%;
+    opacity: .6;
+    border-radius: 10px;
+    position: relative;
+    bottom: 30px;
+    left: 170px;
+  }
+  
+  
+  /* bagian gelap terang */
+  
+  .bground.aktif{
+    background-image: url(pic/Wht.gif);
+    opacity: .2;
+    font-family: Blambot;
+    position:fixed;
+    background-size: 75%;
+  }
+  nav ul.aktif{
+    display: flex;
+    position: absolute;
+    list-style: none;
+    align-items: center;
+    text-decoration: none;
+    opacity: 1;
+    flex-direction: column;
+    top: 0;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(0, 0, 0,1);
+    right: 6px;
+    border-radius: 5px;
+    transform: translateX(105%);
+    transition: all 1s;
+    box-shadow: inset 0 8px 60px rgba(188, 17, 17, 0.6),
+    inset 0 8px 8px  rgba(192, 69, 69, 0.7),
+    inset 0 -4px 4px rgba(79, 6, 6, 0.6);
+  }
+  nav ul.slide.aktif{
+    transform: translateX(0);
+  }
+  footer.aktif{
+    padding: 20px;
+    position: absolute;
+    background-color: rgba(1, 1, 1, 1);
+    margin-top: 50%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  .teks2.aktif{
+    z-index: 1;
+    padding: 20px 0;
+    position: relative;
+    top: 40%;
+    left: 30px;
+    font-family:cursive;
+    font-size: 30px;
+    color: rgba(0, 0, 0,1);
+  }
+  .name.aktif{
+    color: rgb(255, 0, 0);
+    text-shadow:
+    -2px -2px 0 rgb(0, 0, 0),
+    0px -0px 0 rgb(0, 0, 0),
+    -0px 0px 0 rgb(7, 6, 6),
+    2px 3px 0 rgb(0, 0, 0);
+  }
+  
+  /* footer part */
+  
+  footer{
+    position: absolute;
+    background-color: rgba(255, 255, 255,.9);
+    margin-top: 50%;
+    padding: 20px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 1;
+  }
+  

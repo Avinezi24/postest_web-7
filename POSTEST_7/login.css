@@ -1,0 +1,127 @@
+*,body{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("pic/bgA.jpg");
+    background-size: cover;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.isi{
+    display: flex;
+    position: relative;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 80%;
+    top: 5%;
+    color: red;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabel-list{
+    margin-left: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid rgb(70, 67, 67) 0px;
+    min-width: 60%;
+    min-height: auto;
+    max-width: 70%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(239, 219, 219);
+}
+.tabel-list tr td{
+    padding: 5px 10px;
+    background-color: rgb(255, 255, 255);
+    border: 0px;
+}
+.tambah{
+    width: 12%;
+    position: fixed;
+    padding: 15px;
+    border-radius: 5px;
+    top: 30%;
+    right: 70%;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(138, 0, 0);
+}
+a{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color : maroon;
+    gap: 10px;
+}
+.kembali{
+    width: 12%;
+    position: fixed;
+    padding: 20px;
+    border-radius: 5px;
+    top: 45%;
+    right: 70%;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(138, 0, 0);
+}
+
+
+/* ==================================== */
+/* bagian tambah.php */
+/* ==================================== */
+.container2{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(80, 84, 84);
+    align-items: center;
+    justify-content: center;
+}
+.tabel{
+    position: relative;
+    border-radius: 5px;
+    left: 80px;
+    top: 150px;
+    background-color: rgba(255, 255, 255,1);
+    min-width: 30%;
+    min-height: auto;
+    max-width: 40%;
+    padding: 20px;
+}
+.tabel tr td {
+    background-color: rgba(255, 255, 255,1);
+}
+
+/* ==================================== */
+/* bagian edit.php */
+/* ==================================== */
+note{
+    padding: 15px 20px;
+    position: relative;
+    color: rgb(123, 7, 7);
+    left: 15%;
+    background-color: aliceblue;
+    border-radius: 5px;
+    top: 20%;
+
+}
+input{
+    text-align: center;
+}
+input.sub{
+    position: relative;
+    top: 10px;
+    padding: 10px;
+}

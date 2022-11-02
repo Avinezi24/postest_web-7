@@ -1,0 +1,82 @@
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: fixed;
+    background-image: url("pic/bgA.jpg");
+    background-size: cover;
+}
+.contain{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+table{
+    border-radius: 10px;
+    position: absolute;
+    background-size: contain;
+    max-width: 500%;
+    min-width: 500%;
+    max-height: 100%;
+    min-height: 20%;
+    align-items: center;
+    justify-content: center;
+    
+}
+tr{
+    min-width: 20%;
+    min-height: 200%;
+}
+td{
+    padding: 20px 0;
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    list-style: none;
+    text-align: center;
+    min-width: 100px;
+    min-height: auto;
+    background-color: wheat;
+    font-family: cambria;
+    box-shadow: 
+    inset 0 8px 60px rgb(206, 156, 156),
+    inset 0 8px 8px  rgb(133, 36, 36),
+    inset 0 -4px 4px rgb(140, 85, 85);
+}
+.td1{
+    background-color: maroon;
+    box-shadow: inset 0 8px 60px rgb(197, 79, 79),
+    inset 0 8px 8px  rgb(199, 73, 73),
+    inset 0 -4px 4px rgb(52, 16, 16);
+}
+li,.td1{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    list-style: none;
+}
+.saran{
+    text-align: left;
+    position: relative;
+    left: 30px;
+}
+
+ul li{
+    position: relative;
+    gap :10px;
+}
+p{  
+    position: fixed;
+    top: 80%;
+    width: 30px;
+    font-size: 30px;
+}
+p a{
+    position: absolute;
+    color: red;
+    text-decoration: none;
+}
+

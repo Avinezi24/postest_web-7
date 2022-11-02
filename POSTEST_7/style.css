@@ -1,0 +1,121 @@
+@font-face{
+    font-family: Carlhes Browny;
+    src: url(font/fon.otf);
+  }
+  
+  *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  body{
+      width: 100%;
+      height: 100vh;
+      background-image: url("pic/Bg.gif");
+      background-size: 100%;
+  }
+  header{
+      position: relative;
+      width: 100%;
+      height: 10vh;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(117, 33, 33, 0.8);
+  }
+  nav{
+      position: relative;
+      right: 35%;
+      top: 20px;
+  
+  }
+  nav ul{
+      display: flex;
+      gap: 15px;
+  }
+  nav li{
+      position: relative;
+      left: 70%;
+      font-size: 25px;
+      color: rgb(249, 246, 246);
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      cursor: pointer;
+  }
+  nav ul li{
+    display: flex;
+    gap: 10px;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 238, 238);
+    font-size: 20px;
+    
+  }
+  .about{
+    color: rgb(255, 255, 255);
+  }
+  .home,.about,.ridle{
+    padding: 0px 30px;
+    color: rgb(255, 255, 255);
+    background-size:500%;
+    border-radius: 5px;
+  }
+  .home:hover,.about:hover,.ridle:hover{
+    padding: 0px 10px 0px 10px;
+    color: rgba(255, 255, 255, 0.927);
+    background-size:500%;
+    border-radius: 5px;
+    font-size: 25px;
+  }
+  /* BAGIAN about */
+  .me{
+    margin-top: 40px;
+    margin-left: 80px;
+    width: 20%;
+    border-radius: 20px;
+  }
+  .data{
+    font-size: 20px;
+    font-family: Verdana;
+  }
+  .nama{
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin-left: 40%;
+    bottom: 250px;
+    gap: 10px;
+  }
+  .nim{
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin-left: 40%;
+    bottom: 250px;
+    gap: 27px;
+  }
+  .kelas{
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin-left: 40%;
+    bottom: 250px;
+    gap: 15px;
+  }
+  
+  
+  
+  /* bagian footer */
+  
+  footer{
+      background-color: rgb(247, 247, 247,1);
+      padding: 24px 0;
+      font-size: 20px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+  }
